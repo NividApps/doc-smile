@@ -1,3 +1,6 @@
+---
+title: Play Module
+---
 
 # Play Module
 
@@ -102,20 +105,20 @@ object CompanyWebReaderCode extends CompanyWebReaderTrait {
 
 	*	Open browser and access [http://localhost:9000](http://localhost:9000)
 	
-		<!-- ![Application](./../images/access-application.png) -->
+		<img :src="$withBase('/application.png')" />
 
 	*	Access swagger at [http://localhost:9000/swagger](http://localhost:9000/swagger)
 	*	Register a company by name "Sample Company": [http://localhost:9000/swagger#!/Company3240Writer41/registerCompany](http://localhost:9000/swagger#!/Company3240Writer41/registerCompany)
 	
-		<!-- ![Register Company](./../images/register-company.png) -->
+		<img :src="$withBase('/register-company.png')" />
 
 	*	Get the company details: [http://localhost:9000/swagger#!/Company40Reader41/getCompany](http://localhost:9000/swagger#!/Company40Reader41/getCompany)
 	
-		<!-- ![Get Company](./../images/get-company.png) -->
+		<img :src="$withBase('/get-company.png')" />
 
 10.	Stop server
 
-	*	Hit Ctrl+D inside sbt console to stop server
+	* Hit Ctrl+D inside sbt console to stop server
 
 11.	Exercise:
 
