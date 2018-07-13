@@ -26,7 +26,8 @@ module.exports = {
 	        'bike-rental/' 
 	      ],
 	      '/training/': [
-	        'scala-training'
+	        'scala-training',
+	        'scala-tutorial-part1'
 	      ],
 
 	      // fallback
