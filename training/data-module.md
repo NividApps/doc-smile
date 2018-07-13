@@ -1,5 +1,3 @@
-
-
 # Data Module
 
 
@@ -122,29 +120,3 @@ Data module holds composites of the project.
 +	[https://alvinalexander.com/scala/scala-for-loop-examples-syntax-yield-foreach](https://alvinalexander.com/scala/scala-for-loop-examples-syntax-yield-foreach)
 +	[https://alvinalexander.com/scala/best-practice-option-some-none-pattern-scala-idioms](https://alvinalexander.com/scala/best-practice-option-some-none-pattern-scala-idioms)
 +	[https://alvinalexander.com/scala/how-to-use-pattern-matching-scala-match-case-expressions](https://alvinalexander.com/scala/how-to-use-pattern-matching-scala-match-case-expressions)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
