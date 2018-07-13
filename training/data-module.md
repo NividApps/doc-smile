@@ -24,7 +24,6 @@ Data module holds composites of the project.
 2.	Create a new data module by adding the following section:
 
 ```
-
 		section learning {
 			data-module TutorialData at com.metastay.tutorialdata
 			data-module LearningData at com.metastay.learningdata
@@ -36,7 +35,6 @@ Data module holds composites of the project.
 4.	Open file LearningData.kdata & add the following definition of Employee & Company data:
 
 ```
-
 		data Employee (
 			name:String,
 			gender:String,
@@ -48,7 +46,6 @@ Data module holds composites of the project.
 		data Company object-extend (
 			employeeList:Employee*
 		)
-
 ```
 
 5.	Copy the methods from tutorialdata.Company.scala to CompanyObjectExtn.scala class.
@@ -74,8 +71,7 @@ Data module holds composites of the project.
 2.	Define DesignationType as an enum:
 
 ```
-
-		enum DesignationType => SE | SSE | TL | TA | PM | DIR | VP | CEO
+	enum DesignationType => SE | SSE | TL | TA | PM | DIR | VP | CEO
 ```
 3.	Change Employeeâ€™s designation type from string to the enum defined above. 
 4.	Fix compiler errors & test:compile error (if any)
@@ -123,9 +119,9 @@ Data module holds composites of the project.
 ### Further references:
 
 
-+	https://alvinalexander.com/scala/scala-for-loop-examples-syntax-yield-foreach
-+	https://alvinalexander.com/scala/best-practice-option-some-none-pattern-scala-idioms
-+	https://alvinalexander.com/scala/how-to-use-pattern-matching-scala-match-case-expressions
++	[https://alvinalexander.com/scala/scala-for-loop-examples-syntax-yield-foreach](https://alvinalexander.com/scala/scala-for-loop-examples-syntax-yield-foreach)
++	[https://alvinalexander.com/scala/best-practice-option-some-none-pattern-scala-idioms](https://alvinalexander.com/scala/best-practice-option-some-none-pattern-scala-idioms)
++	[https://alvinalexander.com/scala/how-to-use-pattern-matching-scala-match-case-expressions](https://alvinalexander.com/scala/how-to-use-pattern-matching-scala-match-case-expressions)
 
 
 
