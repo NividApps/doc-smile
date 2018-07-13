@@ -27,7 +27,8 @@ module.exports = {
 	      ],
 	      '/training/': [
 	        'scala-training',
-	        'scala-tutorial-part1'
+	        'scala-tutorial-part1',
+	        'scala-tutorial-part2'
 	      ],
 
 	      // fallback
