@@ -102,16 +102,16 @@ object CompanyWebReaderCode extends CompanyWebReaderTrait {
 
 	*	Open browser and access [http://localhost:9000](http://localhost:9000)
 	
-		![Application](./../images/access-application.png)
+		<!-- ![Application](./../images/access-application.png) -->
 
 	*	Access swagger at [http://localhost:9000/swagger](http://localhost:9000/swagger)
-	*	Register a company by name "Sample Company": http://localhost:9000/swagger#!/Company3240Writer41/registerCompany(http://localhost:9000/swagger#!/Company3240Writer41/registerCompany)
+	*	Register a company by name "Sample Company": [http://localhost:9000/swagger#!/Company3240Writer41/registerCompany](http://localhost:9000/swagger#!/Company3240Writer41/registerCompany)
 	
-		![Register Company](./../images/register-company.png)
+		<!-- ![Register Company](./../images/register-company.png) -->
 
-	*	Get the company details: http://localhost:9000/swagger#!/Company40Reader41/getCompany(http://localhost:9000/swagger#!/Company40Reader41/getCompany)
+	*	Get the company details: [http://localhost:9000/swagger#!/Company40Reader41/getCompany](http://localhost:9000/swagger#!/Company40Reader41/getCompany)
 	
-		![Get Company](./../images/get-company.png)
+		<!-- ![Get Company](./../images/get-company.png) -->
 
 10.	Stop server
 
