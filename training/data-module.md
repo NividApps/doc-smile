@@ -58,7 +58,7 @@ Data module holds composites of the project.
 7.	Re-run the test cases.
 
 
-::: Note
+::: warning
   
   IntelliJ Troubleshooting Note: When a new module added is not being recognised as a source folder in intelliJ - Open ApplicationBuild.scala and if you see a banner above as shown below, click on â€œEnable auto-importâ€ else make a small change and save the file - this triggers a reload of the project.
  :::
