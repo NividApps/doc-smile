@@ -17,6 +17,7 @@
 
 
 	```bash
+
 		~>mkdir db db/mongo db/mongo/data
 	```
 5.	Create mongodbconfig under mongo_intsallation_folder/bin with the following configuration:
@@ -45,8 +46,8 @@
 		fi
 	```
 	::: warning
-		the pid field could differ based on os, for macOS its -f3 & ubuntu -f2 (?)
-	 :::
+	  the pid field could differ based on os, for macOS its -f3 & ubuntu -f2 (?)
+	:::
 
 7.	Open command-line & start mongo server using command mongostart
 
