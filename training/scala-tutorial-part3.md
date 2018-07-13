@@ -7,10 +7,10 @@
 
 
 1.	collection api
-	1.	list
-	2.	map
-	3.	set
-	4.	seq
+	*	list
+	*	map
+	*	set
+	*	seq
 2.	map
 3.	filter
 4.	find
