@@ -1,3 +1,6 @@
+---
+title: Scala Training
+---
 
 # Scala Training
 

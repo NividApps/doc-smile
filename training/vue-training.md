@@ -1,3 +1,6 @@
+---
+title: Vue JS Training
+---
 
 # Vue Js Training
 
