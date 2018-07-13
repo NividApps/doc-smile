@@ -29,96 +29,90 @@ $ cd library
 [info] add the import  'import-component libra-api_release-0.1(LibraApi,LibraData,LibraDomain,LibraMongo)' to /Users/sagarmahapatra/i3/library/k/Library.ksmile and smile.
 ```
 
+3.	Import the project and also the component to Eclipse and add the import-component to `library.ksmile`
 
-
-3.	Import the project and also the component to Eclipse and add the import-component to ``library.ksmile``
-
-	.. code-block:: haskell
-
-		import-component libra-api_release-0.1(LibraApi)
-
+```
+import-component libra-api_release-0.1(LibraApi)
+```
 4.	smile 
 
-	.. code-block:: bash
-
-		Smile
+```bash
+$ smile
+```
 
 5.	Import the downloaded Libra component to eclipse.
 
+## Add a vue module
 
+1.	Add the following to `.ksmile` file and understanding the bundle
 
-Add a vue module
-----------------
+```
+section library {
+	vue-module/0.2 LibraryApp at com.metastay.libraryapp
+}
+```
 
-1.	Add the following to .ksmile file and understanding the bundle
-
-	.. code-block:: haskell
-
-		section library {
-			vue-module/0.2 LibraryApp at com.metastay.libraryapp
-		}
-
-2.	Go to project/``plugins.sbt`` and uncomment the below lines.
+2.	Go to project/`plugins.sbt` and uncomment the below lines.
 	
-	.. code-block:: haskell
+```scala
+//addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.18")
+//addSbtPlugin("com.vmunier" % "sbt-play-scalajs" % "0.2.8")
+```
 
-		//addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.18")
-		//addSbtPlugin("com.vmunier" % "sbt-play-scalajs" % "0.2.8")
-3.	Go to ``SbtSettings.scala`` and uncomment the below lines
+3.	Go to `SbtSettings.scala` and uncomment the below lines
 	
-	.. code-block:: haskell
-
-		import org.scalajs.sbtplugin.ScalaJSPlugin.AutoImport._
-		import playscalajs.PlayScalaJS.autoImport._
-		Seq (
-		 scalacOptions ++= Seq("-Xlint", "-deprecation", "-feature"),
-		 libraryDependencies += "org.scala-js" %%%! "scalajs-dom" % "0.9.2"
-		)
-
+```scala
+import org.scalajs.sbtplugin.ScalaJSPlugin.AutoImport._
+import playscalajs.PlayScalaJS.autoImport._
+Seq (
+  scalacOptions ++= Seq("-Xlint", "-deprecation", "-feature"),
+  libraryDependencies += "org.scala-js" %%%! "scalajs-dom" % "0.9.2"
+)
+```
 4.	Run the command smile and refresh Eclipse to see LibraryApp.kvue
 	
-	.. code-block:: bash
+```bash
+$ smile
+```
 
-		smile
+5.	Open `LibraryApp.kvue`, update the route
 
-5.	Open ``LibraryApp.kvue``, update the route
+```
+route "library"
+```
 
-	.. code-block:: haskell
-
-		route "library"
-
-6.	Compile and run
+6.	Compile
 	
-	.. code-block:: haskell
+```bash
+$ compile
+```
 
-		compile
-		run
+7. Run
+
+```bash
+$ run
+```
+
+8.	Open browser
+		[http://localhost:9000/library](http://localhost:9000/library)
+
+		<img :src="$withBase('/enter_zen.png')" />
 
 
-7.	open browser
-		http://localhost:9000/library
 
-		.. image:: ./../images/vue/enter_zen.png
-			:scale: 50
-			:alt: alternate text
+## Setting up the router
 
+1.	In IntelliJ open `libraryapp-main.html`	and uncomment the following to activate router.
 
+```scala
+<router-view></router-view>
 
-Setting up the router
----------------------
+var router = new VueRouter({
+  routes: routes
+})
 
-1.	In IntelliJ open ``libraryapp-main.html`` 	and uncomment the following to activate router.
-
-	.. code-block:: scala
-
-		<router-view></router-view>
-
-		var router = new VueRouter({
-		  routes: routes
-		})
-
-		router : router
-
+router : router
+```
 2.	modules/library/LibraryApp/resrc/``libraryapp-main.html`` should look like below.
 
 	.. code-block:: scala
