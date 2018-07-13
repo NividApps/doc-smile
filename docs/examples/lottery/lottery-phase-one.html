@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lottery Phase I | Smile Doc</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/doc-smile/docs/assets/css/19.styles.c08381dc.css" as="style"><link rel="preload" href="/doc-smile/docs/assets/js/app.79e557a7.js" as="script"><link rel="preload" href="/doc-smile/docs/assets/js/7.31a60614.js" as="script"><link rel="prefetch" href="/doc-smile/docs/assets/js/10.9b4ef875.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/1.cd0f786a.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/2.59e828d9.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/3.1123630d.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/4.6d0472d4.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/5.aa624a50.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/6.9849a319.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/8.6043d3f0.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/9.bdb9dc76.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/0.f46e2a30.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/11.465824ae.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/12.3c8e68bf.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/13.bdcd23a9.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/14.ace7aa28.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/15.96769070.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/16.4eb94106.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/17.0be237f3.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/18.251a8a4f.js">
+    <link rel="stylesheet" href="/doc-smile/docs/assets/css/19.styles.c08381dc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/doc-smile/docs/" class="home-link router-link-active"><!----><span class="site-name">
+      Smile Doc
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/doc-smile/docs/examples/lottery/hello.html" class="nav-link">Another Page</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/doc-smile/docs/examples/lottery/hello.html" class="nav-link">Another Page</a></div><!----></nav><ul class="sidebar-links"><li><a href="/doc-smile/docs/examples/lottery/" class="sidebar-link">Lottery</a></li><li><a href="/doc-smile/docs/examples/lottery/lottery-phase-one.html" class="active sidebar-link">Lottery Phase I</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc-smile/docs/examples/lottery/lottery-phase-one.html#create-lottery-project" class="sidebar-link">Create Lottery Project</a></li><li class="sidebar-sub-header"><a href="/doc-smile/docs/examples/lottery/lottery-phase-one.html#create-lottery-mongo" class="sidebar-link">Create Lottery Mongo</a></li><li class="sidebar-sub-header"><a href="/doc-smile/docs/examples/lottery/lottery-phase-one.html#create-lottery-play" class="sidebar-link">Create Lottery Play</a></li><li class="sidebar-sub-header"><a href="/doc-smile/docs/examples/lottery/lottery-phase-one.html#rest-api" class="sidebar-link">Rest Api</a></li></ul></li><li><a href="/doc-smile/docs/examples/lottery/lottery-phase-two.html" class="sidebar-link">Lottery Phase II</a></li><li><a href="/doc-smile/docs/examples/lottery/lottery-phase-three.html" class="sidebar-link">Lottery Phase III</a></li><li><a href="/doc-smile/docs/examples/lottery/lottery-phase-four.html" class="sidebar-link">Lottery Phase IV</a></li></ul></div><div class="page"><div class="content"><h1 id="lottery-phase-i"><a href="#lottery-phase-i" aria-hidden="true" class="header-anchor">#</a> Lottery Phase I</h1><h2 id="create-lottery-project"><a href="#create-lottery-project" aria-hidden="true" class="header-anchor">#</a> Create Lottery Project</h2><ul><li>Create a Lottery project and set-up</li></ul><div class="language-bash extra-class"><pre class="language-bash"><code>~/temp $ smile new Lottery
+~/temp $ <span class="token function">cd</span> lottery
+~/temp/lottery
+~/temp/lottery $ sbt
+$<span class="token punctuation">[</span>Lottery<span class="token punctuation">]</span> smile
+</code></pre></div><p><a href="/doc-smile/docs/examples/lottery/getting-started.html#import-project-to-eclipse">Import project into eclipse</a> and <a href="/doc-smile/docs/examples/lottery/getting-started.html#import-project-to-intellij">Import project into intelliJ</a></p><h2 id="create-lottery-mongo"><a href="#create-lottery-mongo" aria-hidden="true" class="header-anchor">#</a> Create Lottery Mongo</h2><ul><li>Open Lottery.ksmile in Eclipse.</li><li>Edit <code>Lottery.ksmile</code> and insert the below content to create a LotteryMongo module</li></ul><div class="language- extra-class"><pre class="language-text"><code>section lottery {
+  mongo-module LotteryMongo at com.metastay.lotterymongo
+}
+</code></pre></div><ul><li>$smile</li><li>In Eclipse refresh to see the <code>LotteryMonogo.kmongo</code></li><li>Edit <code>LotteryMongo.kmongo</code> to add a collection.</li></ul><div class="language- extra-class"><pre class="language-text"><code>    collection Lottery {
+        property lotteryName:String
+        property amount:Int
+        property participantList:String*
+        property winner:String?
+        property open:Boolean
+    }
+</code></pre></div><ul><li>$compile</li><li>Write test cases in <code>LotteryMongoTestSuite.scala</code></li></ul><div class="language-scala extra-class"><pre class="language-scala"><code>test<span class="token punctuation">(</span><span class="token string">&quot;lottery&quot;</span><span class="token punctuation">,</span> Tag<span class="token punctuation">(</span><span class="token string">&quot;lottery&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    LotteryWriter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">val</span> lotteryName <span class="token operator">=</span> <span class="token string">&quot;KarnatakaLotto&quot;</span>
+    <span class="token keyword">val</span> row <span class="token operator">=</span> LotteryRow<span class="token punctuation">(</span>lotteryName <span class="token operator">=</span> lotteryName<span class="token punctuation">,</span> amount <span class="token operator">=</span> <span class="token number">20000</span><span class="token punctuation">,</span> open <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    LotteryWriter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>save<span class="token punctuation">(</span>row<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    assert<span class="token punctuation">(</span>LotteryQuery<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>count <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+    <span class="token comment">//Add Participant</span>
+    <span class="token keyword">val</span> q <span class="token operator">=</span> LotteryQuery<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>lotteryName<span class="token punctuation">.</span>is<span class="token punctuation">(</span>lotteryName<span class="token punctuation">)</span>
+    <span class="token keyword">val</span> u <span class="token operator">=</span> LotteryUpdate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>participantList<span class="token punctuation">.</span>addToSet<span class="token punctuation">(</span><span class="token string">&quot;John&quot;</span><span class="token punctuation">)</span>
+    LotteryWriter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>updateOne<span class="token punctuation">(</span>q<span class="token punctuation">,</span> u<span class="token punctuation">)</span>
+    assert<span class="token punctuation">(</span>q<span class="token punctuation">.</span>findOne<span class="token punctuation">.</span>get<span class="token punctuation">.</span>participantList<span class="token punctuation">.</span>size <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+    <span class="token comment">//Remove Lottery</span>
+    <span class="token comment">//LotteryWriter().remove(q)</span>
+    <span class="token comment">//assert(LotteryQuery().count == 0)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>import com.metastay.lotterymongo.lottery._</li><li>Run Test
+<ul><li>$project LotteryMongo</li><li>$test-only com.metastay.lotterymongo.LotteryMongoTestSuite -- -n lottery</li><li>Show the tables in mongo viewer</li></ul></li></ul><h2 id="create-lottery-play"><a href="#create-lottery-play" aria-hidden="true" class="header-anchor">#</a> Create Lottery Play</h2><p>Building Lottery web-app, to see the list of lotteries, and adding play module to createLottery, addParticipant, runLottery.</p><p>.. _lottery-play-web-reader:</p><h3 id="web-reader"><a href="#web-reader" aria-hidden="true" class="header-anchor">#</a> Web Reader</h3><p>First add a data module in <code>Lottery.ksmile</code> to hold data to represent Lottery details. LotteryPlay will use LotteryDetails data, so it depends on LotteryData</p><div class="language- extra-class"><pre class="language-text"><code>section lottery {
+  data-module LotteryData at com.metastay.lottery
+  mongo-module LotteryMongo at com.metastay.lotterymongo
+  play-module LotteryPlay(LotteryData, LotteryMongo) at lotteryplay
+}   
+</code></pre></div><ul><li>$smile</li><li><code>LotteryData.kdata</code> add a Lottery</li></ul><div class="language- extra-class"><pre class="language-text"><code>data Lottery (lotteryName:String, amount:Int, participantList:String*, winner:String?,  status:String)
+</code></pre></div><ul><li>Change the route from <strong>lotteryplay</strong> to <strong>api</strong> in <code>LotterPlay.kplay</code></li></ul><div class="language- extra-class"><pre class="language-text"><code>  module LotteryPlay (LotteryPlay)
+  route &quot;api&quot;    
+</code></pre></div><ul><li>add web-reader to <code>LotteryPlay.kplay</code></li></ul><div class="language- extra-class"><pre class="language-text"><code>web-reader Lottery {
+  view lotteryList (GET){
+      output(LotteryData::Lottery*)
+  }
+  view lotteryDetails (GET){
+      input(lotteryName:String)
+      output(LotteryData::Lottery)
+  }
+}
+</code></pre></div><ul><li>$compile</li><li>Implement <code>LotteryWebReaderCode.lotteryList</code></li></ul><div class="language-scala extra-class"><pre class="language-scala"><code><span class="token keyword">import</span> com<span class="token punctuation">.</span>metastay<span class="token punctuation">.</span>lottery<span class="token punctuation">.</span>data<span class="token punctuation">.</span>Lottery
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>metastay<span class="token punctuation">.</span>lotterymongo<span class="token punctuation">.</span>lottery<span class="token punctuation">.</span>LotteryQuery
+
+<span class="token keyword">object</span> LotteryWebReaderCode <span class="token keyword">extends</span> LotteryWebReaderTrait <span class="token punctuation">{</span>
+   
+  <span class="token keyword">override</span> <span class="token keyword">def</span> lotteryList<span class="token operator">:</span> Request<span class="token punctuation">[</span>LotteryListView<span class="token punctuation">.</span>Pre<span class="token punctuation">]</span> <span class="token keyword">=&gt;</span> List<span class="token punctuation">[</span>Lottery<span class="token punctuation">]</span> <span class="token operator">=</span> LotteryListView<span class="token punctuation">{</span>
+  <span class="token keyword">import</span> LotteryListView<span class="token punctuation">.</span>_
+  request<span class="token operator">:</span> Request<span class="token punctuation">[</span>Input<span class="token punctuation">]</span> <span class="token keyword">=&gt;</span>
+    LotteryQuery<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>find<span class="token punctuation">.</span>map<span class="token punctuation">(</span>
+      row <span class="token keyword">=&gt;</span>
+        <span class="token keyword">new</span> Lottery<span class="token punctuation">(</span>
+          lotteryName <span class="token operator">=</span> row<span class="token punctuation">.</span>lotteryName<span class="token punctuation">,</span>
+          amount <span class="token operator">=</span> row<span class="token punctuation">.</span>amount<span class="token punctuation">,</span>
+          participantList <span class="token operator">=</span>  row<span class="token punctuation">.</span>participantList<span class="token punctuation">,</span>
+          status <span class="token operator">=</span> <span class="token keyword">if</span><span class="token punctuation">(</span>row<span class="token punctuation">.</span>open<span class="token punctuation">)</span>  <span class="token string">&quot;OPEN&quot;</span> <span class="token keyword">else</span> <span class="token string">&quot;CLOSED&quot;</span><span class="token punctuation">,</span>
+          winner <span class="token operator">=</span> row<span class="token punctuation">.</span>winner
+        <span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">override</span> <span class="token keyword">def</span> lotteryDetails<span class="token operator">:</span> Request<span class="token punctuation">[</span>LotteryDetailsView<span class="token punctuation">.</span>Pre<span class="token punctuation">]</span> <span class="token keyword">=&gt;</span> Lottery <span class="token operator">=</span> LotteryDetailsView<span class="token punctuation">{</span>
+    <span class="token keyword">import</span> LotteryDetailsView<span class="token punctuation">.</span>_
+    request<span class="token operator">:</span> Request<span class="token punctuation">[</span>Input<span class="token punctuation">]</span> <span class="token keyword">=&gt;</span> <span class="token keyword">val</span> input <span class="token operator">=</span> request<span class="token punctuation">.</span>body
+      <span class="token keyword">val</span> row <span class="token operator">=</span> LotteryQuery<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>lotteryName<span class="token punctuation">.</span>is<span class="token punctuation">(</span>input<span class="token punctuation">.</span>lotteryName<span class="token punctuation">)</span><span class="token punctuation">.</span>findOne<span class="token punctuation">.</span>get
+      <span class="token keyword">new</span> Lottery<span class="token punctuation">(</span>
+        lotteryName <span class="token operator">=</span> row<span class="token punctuation">.</span>lotteryName<span class="token punctuation">,</span>
+        amount <span class="token operator">=</span> row<span class="token punctuation">.</span>amount<span class="token punctuation">,</span>
+        participantList <span class="token operator">=</span>  row<span class="token punctuation">.</span>participantList<span class="token punctuation">,</span>
+        status <span class="token operator">=</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>row<span class="token punctuation">.</span>open<span class="token punctuation">)</span> <span class="token string">&quot;OPEN&quot;</span> <span class="token keyword">else</span> <span class="token string">&quot;CLOSED&quot;</span><span class="token punctuation">,</span>
+        winner <span class="token operator">=</span> row<span class="token punctuation">.</span>winner
+      <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>$run</li><li>Test through url in browser http://localhost:9000/api/lottery/lottery-list</li></ul><h3 id="web-writer"><a href="#web-writer" aria-hidden="true" class="header-anchor">#</a> Web Writer</h3><ul><li><p>Create lottery passing parameters like name and amount</p></li><li><p>Add Participant to a lottery by passing the participantName and lottery name to which the participant will be added to.</p></li><li><p>Run lottery which will pick a winner amoung the participant and close the lottery.</p></li><li><p>Adding createLottery, addParticipant, run POST calls with an url &quot;api&quot; to <code>LotteryPlay.kplay</code></p></li></ul><div class="language-scala extra-class"><pre class="language-scala"><code>module LotteryPlay <span class="token punctuation">(</span>LotteryPlay<span class="token punctuation">)</span>
+route <span class="token string">&quot;api&quot;</span>
+
+web<span class="token operator">-</span>writer Lottery <span class="token punctuation">{</span>
+  action createLottery<span class="token punctuation">(</span>POST<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      input<span class="token punctuation">(</span>lotteryName<span class="token operator">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span> amount<span class="token operator">:</span> <span class="token builtin">Int</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  action addParticipant<span class="token punctuation">(</span>POST<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      input<span class="token punctuation">(</span>lotteryName<span class="token operator">:</span> <span class="token builtin">String</span><span class="token punctuation">,</span> participantName<span class="token operator">:</span><span class="token builtin">String</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  action run<span class="token punctuation">(</span>POST<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      input<span class="token punctuation">(</span>lotteryName<span class="token operator">:</span> <span class="token builtin">String</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>$compile</li><li>Implement the code to <code>LotteryWebWriterCode.scala</code></li></ul><div class="language-scala extra-class"><pre class="language-scala"><code>
+<span class="token keyword">import</span> com<span class="token punctuation">.</span>metastay<span class="token punctuation">.</span>lotterymongo<span class="token punctuation">.</span>lottery<span class="token punctuation">.</span>_
+<span class="token keyword">object</span> LotteryWebWriterCode <span class="token keyword">extends</span> LotteryWebWriterTrait <span class="token punctuation">{</span>
+
+    <span class="token keyword">override</span> <span class="token keyword">def</span> createLottery<span class="token operator">:</span> Request<span class="token punctuation">[</span>CreateLotteryAction<span class="token punctuation">.</span>Pre<span class="token punctuation">]</span> <span class="token keyword">=&gt;</span> Result <span class="token operator">=</span> CreateLotteryAction<span class="token punctuation">{</span>
+      <span class="token keyword">import</span> CreateLotteryAction<span class="token punctuation">.</span>_
+      request<span class="token operator">:</span> Request<span class="token punctuation">[</span>Input<span class="token punctuation">]</span> <span class="token keyword">=&gt;</span>
+        <span class="token keyword">val</span> input <span class="token operator">=</span> request<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+        LotteryWriter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>save<span class="token punctuation">(</span>LotteryRow<span class="token punctuation">(</span>lotteryName <span class="token operator">=</span> input<span class="token punctuation">.</span>lotteryName<span class="token punctuation">,</span> amount <span class="token operator">=</span> input<span class="token punctuation">.</span>amount<span class="token punctuation">,</span> open <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        Ok<span class="token punctuation">(</span>s<span class="token string">&quot;${input.lotteryName} Lottery Created&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">override</span> <span class="token keyword">def</span> addParticipant<span class="token operator">:</span> Request<span class="token punctuation">[</span>AddParticipantAction<span class="token punctuation">.</span>Pre<span class="token punctuation">]</span> <span class="token keyword">=&gt;</span> Result <span class="token operator">=</span> AddParticipantAction<span class="token punctuation">{</span>
+      <span class="token keyword">import</span> AddParticipantAction<span class="token punctuation">.</span>_<span class="token punctuation">;</span>
+      request<span class="token operator">:</span> Request<span class="token punctuation">[</span>Input<span class="token punctuation">]</span> <span class="token keyword">=&gt;</span>
+        <span class="token keyword">val</span> input <span class="token operator">=</span> request<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+        <span class="token keyword">val</span> q <span class="token operator">=</span> LotteryQuery<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>lotteryName<span class="token punctuation">.</span>is<span class="token punctuation">(</span>input<span class="token punctuation">.</span>lotteryName<span class="token punctuation">)</span>
+        <span class="token keyword">val</span> u <span class="token operator">=</span> LotteryUpdate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>participantList<span class="token punctuation">.</span>addToSet<span class="token punctuation">(</span>input<span class="token punctuation">.</span>participantName<span class="token punctuation">)</span>
+        LotteryWriter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>updateOne<span class="token punctuation">(</span>q<span class="token punctuation">,</span> u<span class="token punctuation">)</span>
+        Ok<span class="token punctuation">(</span>s<span class="token string">&quot;${input.participantName} has been added to ${input.lotteryName}&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">override</span> <span class="token keyword">def</span> run<span class="token operator">:</span> Request<span class="token punctuation">[</span>RunAction<span class="token punctuation">.</span>Pre<span class="token punctuation">]</span> <span class="token keyword">=&gt;</span> Result <span class="token operator">=</span> RunAction<span class="token punctuation">{</span>
+      <span class="token keyword">import</span> RunAction<span class="token punctuation">.</span>_
+      request<span class="token operator">:</span> Request<span class="token punctuation">[</span>Input<span class="token punctuation">]</span> <span class="token keyword">=&gt;</span>
+        <span class="token keyword">val</span> input <span class="token operator">=</span> request<span class="token punctuation">.</span>body<span class="token punctuation">;</span>
+        <span class="token keyword">val</span> q <span class="token operator">=</span> LotteryQuery<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>lotteryName<span class="token punctuation">.</span>is<span class="token punctuation">(</span>input<span class="token punctuation">.</span>lotteryName<span class="token punctuation">)</span>
+        <span class="token keyword">val</span> participantList <span class="token operator">=</span> q<span class="token punctuation">.</span>findOne<span class="token punctuation">.</span>get<span class="token punctuation">.</span>participantList <span class="token comment">//To find the participantList</span>
+        <span class="token keyword">val</span> winnerIndex <span class="token operator">=</span> scala<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Random<span class="token punctuation">.</span>nextInt<span class="token punctuation">(</span>participantList<span class="token punctuation">.</span>size<span class="token punctuation">)</span> <span class="token comment">//To find a winner Index</span>
+        <span class="token keyword">val</span> winner <span class="token operator">=</span> participantList<span class="token punctuation">(</span>winnerIndex<span class="token punctuation">)</span>
+        <span class="token keyword">val</span> u <span class="token operator">=</span> LotteryUpdate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>winner<span class="token punctuation">.</span>set<span class="token punctuation">(</span>Some<span class="token punctuation">(</span>winner<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>open<span class="token punctuation">.</span>set<span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span>
+        LotteryWriter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>updateOne<span class="token punctuation">(</span>q<span class="token punctuation">,</span> u<span class="token punctuation">)</span>
+        Ok<span class="token punctuation">(</span>s<span class="token string">&quot;${winner} has won ${input.lotteryName} Lottery&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>         
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>test through curl
+<ul><li>curl -H &quot;Content-Type: application/json&quot; -X POST -d '{&quot;lotteryName&quot;:&quot;Loto&quot;,&quot;amount&quot;:1000}' http://localhost:9000/api/lottery/create-lottery</li><li>curl -H &quot;Content-Type: application/json&quot; -X POST -d '{&quot;lotteryName&quot;:&quot;Loto&quot;,&quot;participantName&quot;:&quot;John&quot;}' http://localhost:9000/api/lottery/add-participant</li><li>curl -H &quot;Content-Type: application/json&quot; -X POST -d '{&quot;lotteryName&quot;:&quot;Loto&quot;,&quot;participantName&quot;:&quot;Jim&quot;}' http://localhost:9000/api/lottery/add-participant</li><li>curl -H &quot;Content-Type: application/json&quot; -X POST -d '{&quot;lotteryName&quot;:&quot;Loto&quot;,&quot;participantName&quot;:&quot;Joe&quot;}' http://localhost:9000/api/lottery/add-participant</li><li>curl -H &quot;Content-Type: application/json&quot; -X POST -d '{&quot;lotteryName&quot;:&quot;Loto&quot;}' http://localhost:9000/api/lottery/run</li></ul></li><li>or Test through Postman</li></ul><h2 id="rest-api"><a href="#rest-api" aria-hidden="true" class="header-anchor">#</a> Rest Api</h2><p>Expose rest API through Swagger</p><ul><li>Add swagger to <code>LotteryPlay.kplay</code></li></ul><div class="language- extra-class"><pre class="language-text"><code>swagger api {
+  writer LotteryPlay::Lottery
+  reader LotteryPlay::Lottery
+}
+</code></pre></div><ul><li>Inside sbt shell, add-swagger and run</li></ul><div class="language-sh extra-class"><pre class="language-text"><code>$[Lottery]add-swagger
+$[Lottery]run
+</code></pre></div><ul><li>Test through swagger by browsing <a href="http://localhost:9000/swagger" target="_blank" rel="noopener noreferrer">http://localhost:9000/swagger<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> and explore api</li></ul></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/doc-smile/docs/examples/lottery/" class="prev router-link-active">
+          Lottery
+        </a></span><span class="next"><a href="/doc-smile/docs/examples/lottery/lottery-phase-two.html">
+          Lottery Phase II
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/doc-smile/docs/assets/js/7.31a60614.js" defer></script><script src="/doc-smile/docs/assets/js/app.79e557a7.js" defer></script>
+  </body>
+</html>

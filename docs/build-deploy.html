@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Smile Doc</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/doc-smile/docs/assets/css/19.styles.c08381dc.css" as="style"><link rel="preload" href="/doc-smile/docs/assets/js/app.79e557a7.js" as="script"><link rel="preload" href="/doc-smile/docs/assets/js/16.4eb94106.js" as="script"><link rel="prefetch" href="/doc-smile/docs/assets/js/10.9b4ef875.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/1.cd0f786a.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/2.59e828d9.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/3.1123630d.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/4.6d0472d4.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/5.aa624a50.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/6.9849a319.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/7.31a60614.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/8.6043d3f0.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/9.bdb9dc76.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/0.f46e2a30.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/11.465824ae.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/12.3c8e68bf.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/13.bdcd23a9.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/14.ace7aa28.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/15.96769070.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/17.0be237f3.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/18.251a8a4f.js">
+    <link rel="stylesheet" href="/doc-smile/docs/assets/css/19.styles.c08381dc.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/doc-smile/docs/" class="home-link router-link-active"><!----><span class="site-name">
+      Smile Doc
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/doc-smile/docs/hello.html" class="nav-link">Another Page</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/doc-smile/docs/hello.html" class="nav-link">Another Page</a></div><!----></nav><ul class="sidebar-links"><li><a href="/doc-smile/docs/" class="sidebar-link">Home</a></li><li><a href="/doc-smile/docs/hello.html" class="sidebar-link">Hello from Vue</a></li><li><a href="/doc-smile/docs/introduction.html" class="sidebar-link">Intro</a></li><li><a href="/doc-smile/docs/getting-started/getting-started.html" class="sidebar-link">Getting Started</a></li><li><a href="/doc-smile/docs/examples/" class="sidebar-link">Examples</a></li></ul></div><div class="page"><div class="content"><h1 id="build-and-deploy"><a href="#build-and-deploy" aria-hidden="true" class="header-anchor">#</a> Build And Deploy</h1><h2 id="project-build"><a href="#project-build" aria-hidden="true" class="header-anchor">#</a> Project Build:</h2><h3 id="environment-specific-configuration"><a href="#environment-specific-configuration" aria-hidden="true" class="header-anchor">#</a> Environment specific configuration</h3><p>Based on the value of env in env.properties, the right set of
+configuration values would be used while running Smile. there are two
+types of data for configuration</p><ul><li>Data - read from moduleName.conf file</li><li>Binders - Guice binding</li></ul><p>Data for the env-name is is defined as &lt;env-name&gt;.&lt;module-name&gt;.conf
+=&gt; prod.sampledata.conf Binders : ProdSampleBinders.scala where you
+define the guice binding.</p><h3 id="server-mode-vs-interactive-mode"><a href="#server-mode-vs-interactive-mode" aria-hidden="true" class="header-anchor">#</a> Server Mode vs Interactive Mode</h3><h2 id="release-process-setup"><a href="#release-process-setup" aria-hidden="true" class="header-anchor">#</a> Release process Setup:</h2><ol><li>install java.</li><li>create a release folder, inside release folder:</li><li>create a folder named &quot;shipped&quot;</li><li>create a folder named “backup&quot; (optional)</li><li>create a deploy.sh with the following</li></ol><div class="language-{.sourceCode .html} extra-class"><pre class="language-text"><code>RELEASE_ARTIFACT=“&lt;release-name&gt;”
+RELEASE_FOLDER=“&lt;release-folder-name&gt;&quot;
+echo &quot;moving old zip to backup/&quot;
+rm -rf backup/*
+mv $RELEASE_ARTIFACT.zip backup/
+echo &quot;deleting old releases&quot;
+rm -rf $RELEASE_FOLDER
+echo &quot;copying release zip here&quot;
+cp ./shipped/$RELEASE_ARTIFACT.zip .
+unzip $RELEASE_ARTIFACT.zip
+echo &quot;renaming release zip&quot;
+mv $RELEASE_ARTIFACT $RELEASE_FOLDER
+chmod +x $RELEASE_FOLDER/bin/*
+chmod +x $RELEASE_FOLDER/*
+</code></pre></div><ol start="6"><li>create a start-server.sh</li></ol><div class="language-{.sourceCode .scala} extra-class"><pre class="language-text"><code>RELEASE_FOLDER=“&lt;release-folder-name&gt;&quot;
+APP_NAME=“&lt;app-name&gt;”
+ENV_NAME=“&lt;env&gt;”
+RELEASE_DIR_PATH=“&lt;absolute-path-of-release-dir&gt;”
+nohup ./$RELEASE_FOLDER/bin/$APP_NAME -Dsmile.env=$ENV_NAME -Dpidfile.path=$RELEASE_DIR_PATH/$APP_NAME.pid &quot;$@&quot; &amp;
+</code></pre></div><ol start="7"><li>create a stop-server.sh</li></ol><div class="language-{.sourceCode .scala} extra-class"><pre class="language-text"><code>APP_NAME=&quot;crash&quot;
+kill `cat ./$APP_NAME.pid`
+</code></pre></div><h2 id="deploying-the-application"><a href="#deploying-the-application" aria-hidden="true" class="header-anchor">#</a> Deploying the application:</h2><ol><li>go to project-home &amp; build the release zip:</li></ol><div class="language-{.sourceCode .scala} extra-class"><pre class="language-text"><code>$project-home&gt;sbt smile clean; prepare; generate; compile; release 
+</code></pre></div><p>or in case of a bundle</p><blockquote><div class="language-{.sourceCode .scala} extra-class"><pre class="language-text"><code>$project-home&gt;sbt smile clean; prepare; generate; compile;
+$project-home&gt;release-bundle &lt;bundle-name&gt;
+</code></pre></div></blockquote><ol start="2"><li>copy/ship the release zip to the “shipped” folder inside release.
+ex:</li></ol><div class="language-{.sourceCode .scala} extra-class"><pre class="language-text"><code>$project-home&gt;cp release/&lt;release-name&gt;.zip &lt;release-folder-path&gt;/shipped
+</code></pre></div><ol start="3"><li>goto release folder, deploy &amp; start server:</li></ol><div class="language-{.sourceCode .scala} extra-class"><pre class="language-text"><code>run ./deploy.sh
+run ./start-server.sh
+</code></pre></div><ol start="4"><li>to stop server</li></ol><div class="language-{.sourceCode .scala} extra-class"><pre class="language-text"><code>run ./stop-server.sh
+</code></pre></div></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
+    <script src="/doc-smile/docs/assets/js/16.4eb94106.js" defer></script><script src="/doc-smile/docs/assets/js/app.79e557a7.js" defer></script>
+  </body>
+</html>
