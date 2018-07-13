@@ -28,7 +28,19 @@ module.exports = {
 	      '/training/': [
 	        'scala-training',
 	        'scala-tutorial-part1',
-	        'scala-tutorial-part2'
+	        'scala-tutorial-part2',
+	        'scala-tutorial-part3',
+	        'scala-tutorial-part4',
+	        'scala-assignment',
+	        'smile-modules-overview',
+	        'data-module',
+	        'mongo-setup',
+	        'mongo-module',
+	        'domain-module',
+	        'play-module',
+	        'vue-training',
+	        'vue-smile-training'
+
 	      ],
 
 	      // fallback
