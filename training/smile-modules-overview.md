@@ -11,3 +11,4 @@
    :alt: alternate text -->
 
 
+<img src="./../.vuepress/public/smile-modules.png" alt="alt text">
