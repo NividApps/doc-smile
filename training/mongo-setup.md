@@ -49,8 +49,8 @@
 		sudo kill -2 ${pid};
 		fi
 	```
-	::: warning
-	 Note\
+	::: Note
+
 	 the pid field could differ based on os, for macOS its -f3 & ubuntu -f2 (?)
 	 :::
 
