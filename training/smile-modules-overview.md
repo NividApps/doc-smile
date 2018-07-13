@@ -11,4 +11,5 @@
    :alt: alternate text -->
 
 
-<img src="./../.vuepress/public/smile-modules.png" alt="alt text">
+<!-- <img src="./../.vuepress/public/smile-modules.png" alt="alt text"> -->
+<img :src="$withBase('/smile-modules.png')"/>
