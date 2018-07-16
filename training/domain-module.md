@@ -58,7 +58,7 @@ class CompanyCommandSetCode(domainLogicRef:DomainLogicRef) extends CompanyComman
 ```
 5.	Implement the command: copy the code written in LearningMongoObject class's createCompany api and change it as follows:
 
-```
+```scala
 override def registerCompany = RegisterCompanyCommand {
  import RegisterCompanyCommand._
  input: Input =>
@@ -143,7 +143,7 @@ class CompanyDomainLogicCode extends CompanyDomainLogic {
 1.	Open `LearningDomain.kdomain` file in eclipse
 2.	Add a check to ensure the company got registered
 
-```scala
+```
 command registerCompany{
 input(companyName:String, address:String)
 pre {
