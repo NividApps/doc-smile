@@ -96,7 +96,7 @@ $ run
 8.	Open browser
 		[http://localhost:9000/library](http://localhost:9000/library)
 
-		<img :src="$withBase('/training/enter_zen.png')" />
+	<img :src="$withBase('/training/enter_zen.png')" />
 
 
 
