@@ -95,15 +95,17 @@ command registerCompany{
 
 
 1.	Add a check to ensure the company is not already registered:
-		*	Open `LearningDomain.kdomain` file in eclipse
-		*	Define a **domain-logic** & a **function companyNameExists**
+		
+	*	Open `LearningDomain.kdomain` file in eclipse
+	*	Define a **domain-logic** & a **function companyNameExists**
 		
 ```
 domain-logic Company {
 	function companyNameExist(name:String):Boolean
 }
 ```
-		*	Define a **domain-ref** inside the command set **Company**
+		
+  *	Define a **domain-ref** inside the command set **Company**
 
 ```
 command-set Company {
@@ -111,7 +113,8 @@ command-set Company {
 	command registerCompany{...}
 }
 ```
-		*	Add the check in the command
+		
+  *	Add the check in the command
 
 ```
 command registerCompany{
@@ -123,9 +126,10 @@ command registerCompany{
 	output(companyId:Id) 
 }
 ```
-		*	Ensure the code compiles.
-		*	Implement the domain logic function
-			a.	Open the domain logic code file in intelliJ - ``CompanyDomainLogicCode.scala``
+		
+  *	Ensure the code compiles.
+  *	Implement the domain logic function
+			a.	Open the domain logic code file in intelliJ - `CompanyDomainLogicCode.scala`
 			b.	implement companyNameExist method
 			
 ```scala
@@ -198,7 +202,7 @@ test("register a new company", Tag("register-new")) {
 4.	If you run the test again it will fail since the company got created in the db from the earlier test case, so you must clean the db for every test run
 5.	Dropping the collection before each test is run:
 
-	*	Add the following code to your test suite:
+  *	Add the following code to your test suite:
 	
 ```scala
 override def beforeEach(testData: TestData): Unit = {
@@ -206,9 +210,10 @@ override def beforeEach(testData: TestData): Unit = {
 	 CompanyWriter().drop()
 }
 ```
-	:::tip note
-	 alternately you can also override afterEach method for the same.
-	::: 
+	
+:::tip note
+alternately you can also override afterEach method for the same.
+::: 
 
 6.	Now you can run the test any number of times without failure as the company collection gets cleared before each test run.
 

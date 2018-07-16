@@ -58,12 +58,14 @@ section learning {
 	mongo-module LearningMongo(LearningData) at com.metastay.leaningmongo
 }
 ```
-	*	Any change to ksmile requires you to run smile command.
+	
+   * Any change to ksmile requires you to run smile command.
 
 ```bash
 [Mould] $ smile
 ```
-	* Open LearningMongo.kmongo, change designation type from String to LearningData:: DesignationType 
+	
+  * Open LearningMongo.kmongo, change designation type from String to LearningData:: DesignationType 
 	
 ```
 collection Employee {
@@ -75,7 +77,8 @@ collection Employee {
 	property emailId:String?
 }
 ```
-	*	Make sure compile is successful
+	
+  * Make sure compile is successful
 	 	
 ## Create Company collection
 
@@ -140,7 +143,8 @@ object LearningMongoObject extends LearningMongoTrait {
 	}
 }
 ```
-	*	Call this method from a test-case in the mongo module : 
+	
+  *	Call this method from a test-case in the mongo module : 
 
 	
 ```scala
@@ -152,7 +156,8 @@ class LearningMongoTestSuite extends ... {
 	}
 }
 ```
-	*	Run the test to create a new company in db:
+	
+  *	Run the test to create a new company in db:
 
 
 ```bash
@@ -166,10 +171,11 @@ done.
 [info] ScalaTest
 ...
 ```
-	*	Open mongo viewer & you will see a new row created in company collection
+
+  *	Open mongo viewer & you will see a new row created in company collection
 	
 	
-   <img src="$withBase('/mongo-viewer.png')" />
+ <img :src="$withBase('/mongo-viewer.png')" />
 
 
 
@@ -185,7 +191,8 @@ object LearningMongoObject extends LearningMongoTrait {
 	}
 }
 ```
-	*	Call this method from a test-case in the mongo module : 
+	
+  *	Call this method from a test-case in the mongo module : 
 
 
 ```scala
@@ -196,7 +203,8 @@ class LearningMongoTestSuite ... {
 	}
 }
 ```
-	*	Run the test case to list all companies:
+	
+  *	Run the test case to list all companies:
 
 
 ```bash
@@ -207,7 +215,8 @@ Company List: List(CompanyRow(_id=5b0291bb77c8344dea90372c,name=Software Solutio
 [info] - list all companies
 ...
 ```
-	*	**Exercise:** Write a function to get the details of a company given the company name.
+	
+  *	**Exercise:** Write a function to get the details of a company given the company name.
 
 4.	Update a record using CollectionUpdate
 	
@@ -224,7 +233,8 @@ object LearningMongoObject extends LearningMongoTrait {
 	...
 }
 ```
-	*	Call this method from a test-case in the mongo module : 
+	
+  *	Call this method from a test-case in the mongo module : 
 
 
 ```scala
@@ -237,7 +247,8 @@ class LearningMongoTestSuite ... {
 	...
 }
 ```
-	*	Run the test case to see the change in db.
+	
+  *	Run the test case to see the change in db.
 
 ```bash
 [LearningMongo] test-only *LearningMongoTestSuite* -- -n update
@@ -257,7 +268,8 @@ object LearningMongoObject extends LearningMongoTrait {
 	...
 }
 ```
-	*	Call this method from a test-case in the mongo module : 
+	
+  *	Call this method from a test-case in the mongo module : 
 
 
 ```scala
@@ -270,7 +282,8 @@ class LearningMongoTestSuite ... {
 	...
 }
 ```
-	*	Run the test case to see the change in db.
+	
+  *	Run the test case to see the change in db.
 
 
 ```bash
@@ -291,8 +304,9 @@ collection Company extend {
 	property address:String
 }
 ```
-	*	On compile, you must see a file by name CompanyRowExtn created with the company row available in scope
-	*	Define getAllEmployeeList in this extension class
+	
+  *	On compile, you must see a file by name CompanyRowExtn created with the company row available in scope
+  *	Define getAllEmployeeList in this extension class
 
 
 ```
@@ -303,7 +317,8 @@ trait CompanyRowExtn extends CompanyRowExtnTrait {
  }
 }
 ```
-	*	Call this api from a test:
+  
+  *	Call this api from a test:
 
 
 ```scala
@@ -322,7 +337,7 @@ class LearningMongoTestSuite ... {
 
 
 ```bash
-		[LearningMongo] test-only *LearningMongoTestSuite* -- -n employees
+[LearningMongo] test-only *LearningMongoTestSuite* -- -n employees
 ```
 
 # Assignment
