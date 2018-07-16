@@ -164,7 +164,7 @@ pre {
 2.	Open file `LearningDomainTestSuite` and call the command from the test case as follows:
 
 ```scala
-class LearningDomainTestSuite extends â€¦ {
+class LearningDomainTestSuite extends ... {
 	test("call command", Tag("register")) {
 		println("Calling registerCompany command...")
 		val output =  grab[CompanyCommandSet].registerCompanyNow(companyName = "I3 Software Pvt Lab", address = "HSR, Bangalore")
