@@ -48,7 +48,7 @@ command-set Company {
 3.	Compile the code in sbt
 4.	Open intelliJ and you should see a file by name CompanyCommandSetCode.scala generated with a method registerCompany defined and ready to be implemented.
 
-```
+```scala
 class CompanyCommandSetCode(domainLogicRef:DomainLogicRef) extends CompanyCommandSetCommands {
      override def registerCompany = RegisterCompanyCommand {
         import RegisterCompanyCommand._
@@ -58,7 +58,7 @@ class CompanyCommandSetCode(domainLogicRef:DomainLogicRef) extends CompanyComman
 ```
 5.	Implement the command: copy the code written in LearningMongoObject class's createCompany api and change it as follows:
 
-```
+```scala
 override def registerCompany = RegisterCompanyCommand {
  import RegisterCompanyCommand._
  input: Input =>
@@ -139,7 +139,7 @@ class CompanyDomainLogicCode extends CompanyDomainLogic {
 1.	Open `LearningDomain.kdomain` file in eclipse
 2.	Add a check to ensure the company got registered
 
-```scala
+```
 command registerCompany{
 input(companyName:String, address:String)
 pre {
@@ -160,7 +160,7 @@ pre {
 2.	Open file `LearningDomainTestSuite` and call the command from the test case as follows:
 
 ```scala
-class LearningDomainTestSuite extends â€¦ {
+class LearningDomainTestSuite extends {
 	test("call command", Tag("register")) {
 		println("Calling registerCompany command...")
 		val output =  grab[CompanyCommandSet].registerCompanyNow(companyName = "I3 Software Pvt Lab", address = "HSR, Bangalore")
