@@ -19,11 +19,15 @@ module.exports = {
 	      '/examples/bike-rental/' :[
 	      	'',
 	      	'page1'
+	      ],
+	      '/examples/foodbowl/':[
+            'objectives'
 	      ],	      
 	      '/examples/': [
 	        'lottery/',
 	        'driving-license/',
-	        'bike-rental/' 
+	        'bike-rental/' ,
+	        'foodbowl'
 	      ],
 	      '/training/': [
 	        'scala-training',

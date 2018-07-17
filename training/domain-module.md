@@ -48,7 +48,7 @@ command-set Company {
 3.	Compile the code in sbt
 4.	Open intelliJ and you should see a file by name CompanyCommandSetCode.scala generated with a method registerCompany defined and ready to be implemented.
 
-```
+```scala
 class CompanyCommandSetCode(domainLogicRef:DomainLogicRef) extends CompanyCommandSetCommands {
      override def registerCompany = RegisterCompanyCommand {
         import RegisterCompanyCommand._
@@ -164,7 +164,11 @@ pre {
 2.	Open file `LearningDomainTestSuite` and call the command from the test case as follows:
 
 ```scala
+<<<<<<< HEAD
 class LearningDomainTestSuite extends ... {
+=======
+class LearningDomainTestSuite extends {
+>>>>>>> 68a8b60e0f359e256d7582f2d291872fe0fad08e
 	test("call command", Tag("register")) {
 		println("Calling registerCompany command...")
 		val output =  grab[CompanyCommandSet].registerCompanyNow(companyName = "I3 Software Pvt Lab", address = "HSR, Bangalore")
@@ -245,6 +249,7 @@ test("create a company with invalid name", Tag("invalid-name")) {
 [info] All tests passed.
 
 ```
+
 
 
 
