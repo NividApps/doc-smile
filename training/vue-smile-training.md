@@ -397,9 +397,9 @@ Will call the backend api getRecentBooks which return only last 100 books which 
 	</script>
 	```
 
-	g.	Run and see in chrome inspect -> Network tab that the getRecent Api is getting called.
+	g. Run and see in chrome inspect -> Network tab that the getRecent Api is getting called.
 
-		<img :src="$withBase('/training/recent_books_api_call.png')" />
+	<img :src="$withBase('/training/recent_books_api_call.png')" />
 
 
 
@@ -471,7 +471,7 @@ override val mutateRecentBooks: (State , JsArray[com.metastay.libraryapp.data.Bo
 }
 ```
 
-8.	Update the BookActionCode.scala getRecentBooks function to convert the outputList which is a type of "`com.metastay.librarydata.data.Book`" to recentBookList which is type of this "`com.metastay.libraryapp.data.Book`" and update it to store.
+8.	Update the BookActionCode.scala getRecentBooks function to convert the outputList which is a type of `com.metastay.librarydata.data.Book` to recentBookList which is type of this `com.metastay.libraryapp.data.Book` and update it to store.
   	
 ```scala
 def getRecentBooks: (Store) => Unit = { (store) =>

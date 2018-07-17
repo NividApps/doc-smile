@@ -10,16 +10,17 @@ title: Play Module
 
 1.	Open `Mould.ksmile` file and add the play module definition as follows
 
-```
+``` {5}
 section learning {
 	data-module LearningData at com.metastay.learningdata
 	mongo-module LearningMongo(LearningData) at com.metastay.leaningmongo
 	domain-module LearningDomain(LearningMongo) at com.metastay.learningdomain
-	**play-module LearningWeb(LearningDomain) at learningweb**
+	play-module LearningWeb(LearningDomain) at learningweb
 }
 ```
 
-2.	Run smile command in sbt 
+2.	Run smile command in sbt
+
 3.	Refresh the project in eclipse. You will see the `LearningWeb.kplay` file generated with the following default route:
 
 ```
