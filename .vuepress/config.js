@@ -24,12 +24,19 @@ module.exports = {
 	      	'lottery-phase-three',
 	      	'lottery-phase-four'
 	      ],
+	      '/examples/bike-rental/' :[
+ 	      	'',
+ 	      	'page1'
+	      ],
+	      '/examples/foodbowl/':[
+            'objectives'
+ 	      ],
 	      '/examples/': [
 	      	'',
 	        'lottery/',
 	        'driving-license/',
-	        'bike-rental/' ,
-	        'foodbowl'
+	        'bike-rental/',
+	        'foodbowl/objectives'
 	      ],
 	      '/guide/': [
 	        '',
