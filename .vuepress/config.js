@@ -29,25 +29,17 @@ module.exports = {
  	      	'page1'
 	      ],
 	      '/examples/foodbowl/':[
-<<<<<<< HEAD
             '',
             'phase I'
 	      ],	      
-=======
-            'objectives'
- 	      ],
->>>>>>> f6cc275d9e2d27c3e345c9b9c9c8993d107af8e4
 	      '/examples/': [
 	      	'',
 	        'lottery/',
 	        'driving-license/',
-<<<<<<< HEAD
 	        'bike-rental/' ,
-	        'foodbowl/'
-=======
+	        'foodbowl/',
 	        'bike-rental/',
 	        'foodbowl/objectives'
->>>>>>> f6cc275d9e2d27c3e345c9b9c9c8993d107af8e4
 	      ],
 	      '/guide/': [
 	        '',
