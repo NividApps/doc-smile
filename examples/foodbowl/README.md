@@ -1,6 +1,11 @@
 ---
+<<<<<<< HEAD:examples/foodbowl/README.md
+title: FOODBOWL
+=======
 title : Food Bowl
+>>>>>>> f6cc275d9e2d27c3e345c9b9c9c8993d107af8e4:examples/foodbowl/objectives.md
 ---
+
 
 #   **FOODBOWL**
 
