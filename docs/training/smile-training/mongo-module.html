@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mongo Module | Smile</title>
+    <meta name="description" content="A Platform for building Enterprise Application.">
+    <link rel="shortcut icon" type="image/x-icon" href="/doc-smile/docs/icon/favicon-96x96.png">
+    
+    <link rel="preload" href="/doc-smile/docs/assets/css/44.styles.e924e5be.css" as="style"><link rel="preload" href="/doc-smile/docs/assets/js/app.10c24a9a.js" as="script"><link rel="preload" href="/doc-smile/docs/assets/js/6.215e425f.js" as="script"><link rel="prefetch" href="/doc-smile/docs/assets/js/23.71a0f3eb.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/1.fd4f445a.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/2.e4588398.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/3.ea187399.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/4.d9041325.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/5.ac415331.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/7.50456d82.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/8.744f0f0b.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/9.aad832dd.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/10.359a6533.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/11.ffe09cd4.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/12.8a4edd3b.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/13.5cf38ade.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/14.57cfd009.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/15.c47df049.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/16.c14a6d6c.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/17.2908292b.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/18.3f57b51a.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/19.9542bb2f.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/20.f1ba2886.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/21.fc143b96.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/22.302837af.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/0.3aa5dfae.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/24.caeb47d5.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/25.d7c4235d.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/26.d0aad37f.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/27.08f8ab36.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/28.ddd96ce1.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/29.ad30da66.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/30.41c02f74.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/31.a3737650.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/32.e9a5e652.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/33.d101fce9.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/34.085831b3.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/35.5aa78fae.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/36.361e31a5.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/37.d3800ab0.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/38.38cd53b2.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/39.eda43923.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/40.1218b970.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/41.4695e7fe.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/42.5e192ed3.js"><link rel="prefetch" href="/doc-smile/docs/assets/js/43.575824cd.js">
+    <link rel="stylesheet" href="/doc-smile/docs/assets/css/44.styles.e924e5be.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/doc-smile/docs/" class="home-link router-link-active"><img src="/doc-smile/docs/smile_logo.png" class="logo"><span class="site-name can-hide">
+      Smile
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/doc-smile/docs/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="/doc-smile/docs/examples/" class="nav-link">Examples</a></div><div class="nav-item"><a href="/doc-smile/docs/cookbook/" class="nav-link">Cookbook</a></div><div class="nav-item"><a href="/doc-smile/docs/training/" class="nav-link router-link-active">Training</a></div><div class="nav-item"><a href="/doc-smile/docs/ecosystem/" class="nav-link">Ecosystem</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/doc-smile/docs/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="/doc-smile/docs/examples/" class="nav-link">Examples</a></div><div class="nav-item"><a href="/doc-smile/docs/cookbook/" class="nav-link">Cookbook</a></div><div class="nav-item"><a href="/doc-smile/docs/training/" class="nav-link router-link-active">Training</a></div><div class="nav-item"><a href="/doc-smile/docs/ecosystem/" class="nav-link">Ecosystem</a></div><!----></nav><ul class="sidebar-links"><li><a href="/doc-smile/docs/training/smile-training/" class="sidebar-link">Smile Training</a></li><li><a href="/doc-smile/docs/training/smile-training/smile-modules-overview.html" class="sidebar-link">Smile Modules Overview</a></li><li><a href="/doc-smile/docs/training/smile-training/data-module.html" class="sidebar-link">Data Module</a></li><li><a href="/doc-smile/docs/training/smile-training/mongo-setup.html" class="sidebar-link">Mongo Setup</a></li><li><a href="/doc-smile/docs/training/smile-training/mongo-module.html" class="active sidebar-link">Mongo Module</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/doc-smile/docs/training/smile-training/mongo-module.html#creating-a-mongo-module" class="sidebar-link">Creating a mongo module</a></li><li class="sidebar-sub-header"><a href="/doc-smile/docs/training/smile-training/mongo-module.html#define-employee-collection" class="sidebar-link">Define Employee collection</a></li><li class="sidebar-sub-header"><a href="/doc-smile/docs/training/smile-training/mongo-module.html#create-company-collection" class="sidebar-link">Create Company collection</a></li><li class="sidebar-sub-header"><a href="/doc-smile/docs/training/smile-training/mongo-module.html#crud-operations" class="sidebar-link">CRUD operations:</a></li></ul></li><li><a href="/doc-smile/docs/training/smile-training/domain-module.html" class="sidebar-link">Domain Module</a></li><li><a href="/doc-smile/docs/training/smile-training/play-module.html" class="sidebar-link">Play Module</a></li><li><a href="/doc-smile/docs/training/smile-training/vue/" class="sidebar-link">Vue Training</a></li></ul></div><div class="page"><div class="content"><h1 id="mongo-module"><a href="#mongo-module" aria-hidden="true" class="header-anchor">#</a> Mongo Module</h1><h2 id="creating-a-mongo-module"><a href="#creating-a-mongo-module" aria-hidden="true" class="header-anchor">#</a> Creating a mongo module</h2><ol><li>Open <code>Mould.ksmile</code> file, add a mongo module to the project</li></ol><div class="language- extra-class"><pre class="language-text"><code>section learning {
+	data-module LearningData at com.metastay.learningdata
+	mongo-module LearningMongo at com.metastay.leaningmongo
+}
+</code></pre></div><ol start="2"><li>Open sbt console and run smile command</li></ol><div class="language-bash extra-class"><pre class="language-bash"><code>mould<span class="token operator">&gt;</span>sbt
+<span class="token punctuation">[</span>Mould<span class="token punctuation">]</span> $ smile
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> smile build
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> updating modules <span class="token punctuation">..</span>.
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> creating module :LearningMongo
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> reloading <span class="token punctuation">..</span>.
+<span class="token punctuation">..</span>.
+</code></pre></div><ol start="3"><li>Refresh the project in eclipse</li><li>You will see the <code>LearningMongo.kmongo</code> file created under learning package</li></ol><h2 id="define-employee-collection"><a href="#define-employee-collection" aria-hidden="true" class="header-anchor">#</a> Define Employee collection</h2><ol><li>Open <code>LearningMongo.kmongo</code> in eclipse</li><li>Define Employee collection as follows:</li></ol><div class="language- extra-class"><pre class="language-text"><code>collection Employee {
+	property name:String
+	property gender:String
+	property yearOfJoining:Int
+	property designation:String
+	property experienceInMonths:Int
+	property emailId:String?
+}
+</code></pre></div><ol start="3"><li>Make sure compile is successful</li><li>Change designation type to enum
+<ul><li>Since enum is defined in a different module, we need to specify the module dependency in the ksmile file.</li><li>Open <code>.ksmile</code> file, add data module dependency to mongo module in order to access the DesignationType enum.</li></ul></li></ol><div class="language- extra-class"><pre class="language-text"><code>section learning {
+	data-module LearningData at com.metastay.learningdata
+	mongo-module LearningMongo(LearningData) at com.metastay.leaningmongo
+}
+</code></pre></div><ul><li>Any change to ksmile requires you to run smile command.</li></ul><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>Mould<span class="token punctuation">]</span> $ smile
+</code></pre></div><ul><li>Open LearningMongo.kmongo, change designation type from String to LearningData:: DesignationType</li></ul><div class="language- extra-class"><pre class="language-text"><code>collection Employee {
+	property name:String
+	property gender:String
+	property yearOfJoining:Int
+	property designation:LearningData:: DesignationType
+	property experienceInMonths:Int
+	property emailId:String?
+}
+</code></pre></div><ul><li>Make sure compile is successful</li></ul><h2 id="create-company-collection"><a href="#create-company-collection" aria-hidden="true" class="header-anchor">#</a> Create Company collection</h2><ol><li>Open LearningMongo.kmongo in eclipse and define Company collection as follows:</li></ol><div class="language- extra-class"><pre class="language-text"><code>collection Company {
+	property name:String
+	property address:String	
+}
+</code></pre></div><ol start="2"><li>Make sure compile is successful</li><li>Adding a collection reference (foreign key):
+<ul><li>Let's link company and employee by adding company's reference to employee:</li></ul></li></ol><div class="language- extra-class"><pre class="language-text"><code>collection Employee {
+	property name:String
+	property gender:String
+	property yearOfJoining:Int
+	property designation:LearningData:: DesignationType
+	property experienceInMonths:Int
+	property emailId:String?
+	**reference company:Company**
+}
+</code></pre></div><ul><li>Make sure compile is successful
+<ul><li>This creates a soft link between Employee &amp; company through the company's _id.</li><li>This spec creates a company_oid field in employee collection, and provides you the company object which is lazily loaded on access.</li></ul></li></ul><h2 id="crud-operations"><a href="#crud-operations" aria-hidden="true" class="header-anchor">#</a> CRUD operations:</h2><ol><li><p>Smile generates the following classes for every collection defined in kmongo spec.</p><ul><li><strong><code>&lt;Collection&gt;Row</code></strong></li><li><strong><code>&lt;Collection&gt;Query</code></strong></li><li><strong><code>&lt;Collection&gt;Writer</code></strong></li><li><strong><code>&lt;Collection&gt;Update</code></strong></li><li><strong><code>&lt;Collection&gt;Reader</code></strong></li></ul></li><li><p>Insert/Save a record using CollectionWriter</p><ul><li>Open LearningMongoObject.scala in intelliJ</li><li>Define a function to insert a company into database.</li></ul></li></ol><div class="language-scala extra-class"><pre class="language-scala"><code><span class="token keyword">object</span> LearningMongoObject <span class="token keyword">extends</span> LearningMongoTrait <span class="token punctuation">{</span>
+	<span class="token keyword">def</span> createCompany<span class="token punctuation">(</span>name<span class="token operator">:</span><span class="token builtin">String</span><span class="token punctuation">,</span> address<span class="token operator">:</span><span class="token builtin">String</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Unit</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+	 <span class="token keyword">val</span> companyRow <span class="token operator">=</span> CompanyRow<span class="token punctuation">(</span>
+	   name <span class="token operator">=</span> name <span class="token punctuation">,</span>
+	   address <span class="token operator">=</span> address
+	 <span class="token punctuation">)</span>
+	 CompanyWriter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>insert<span class="token punctuation">(</span>companyRow<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>Call this method from a test-case in the mongo module :</li></ul><div class="language-scala extra-class"><pre class="language-scala"><code><span class="token keyword">class</span> LearningMongoTestSuite <span class="token keyword">extends</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">{</span>
+	test<span class="token punctuation">(</span><span class="token string">&quot;create a company&quot;</span><span class="token punctuation">,</span> Tag<span class="token punctuation">(</span><span class="token string">&quot;create&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		println<span class="token punctuation">(</span><span class="token string">&quot;creating a company..&quot;</span><span class="token punctuation">)</span>
+		createCompany<span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;Software Solutions&quot;</span><span class="token punctuation">,</span> address <span class="token operator">=</span> <span class="token string">&quot;HSR, India&quot;</span><span class="token punctuation">)</span>
+		println<span class="token punctuation">(</span><span class="token string">&quot;done.&quot;</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>Run the test to create a new company in db:</li></ul><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>Mould<span class="token punctuation">]</span> $ project LearningMongo
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> Set current project to LearningMongo <span class="token punctuation">(</span>in build file:/Users/<span class="token operator">&lt;</span>username<span class="token operator">&gt;</span>/metastay/mould/<span class="token punctuation">)</span>
+<span class="token punctuation">[</span>LearningMongo<span class="token punctuation">]</span> test-only *LearningMongoTestSuite* -- -n create
+creating a company<span class="token punctuation">..</span>
+done.
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> LearningMongoTestSuite:
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> - create a company
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> ScalaTest
+<span class="token punctuation">..</span>.
+</code></pre></div><ul><li>Open mongo viewer &amp; you will see a new row created in company collection</li></ul><img src="/doc-smile/docs/mongo-viewer.png"><ol start="3"><li><p>Read record using CollectionQuery</p><ul><li>define a function to read all companies in database.</li></ul></li></ol><div class="language-scala extra-class"><pre class="language-scala"><code><span class="token keyword">object</span> LearningMongoObject <span class="token keyword">extends</span> LearningMongoTrait <span class="token punctuation">{</span>
+	<span class="token keyword">def</span> listCompanies<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> List<span class="token punctuation">[</span>CompanyRow<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+	 CompanyQuery<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>find
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>Call this method from a test-case in the mongo module :</li></ul><div class="language-scala extra-class"><pre class="language-scala"><code><span class="token keyword">class</span> LearningMongoTestSuite <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">{</span>
+	test<span class="token punctuation">(</span><span class="token string">&quot;list all companies&quot;</span><span class="token punctuation">,</span> Tag<span class="token punctuation">(</span><span class="token string">&quot;read&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">val</span> companyList <span class="token operator">=</span> listCompanies<span class="token punctuation">(</span><span class="token punctuation">)</span>
+		println<span class="token punctuation">(</span><span class="token string">&quot;Company List: &quot;</span> <span class="token operator">+</span> companyList<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>Run the test case to list all companies:</li></ul><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>LearningMongo<span class="token punctuation">]</span> test-only *LearningMongoTestSuite* -- -n <span class="token function">read</span>
+<span class="token punctuation">..</span>.
+Company List: List<span class="token punctuation">(</span>CompanyRow<span class="token punctuation">(</span>_id<span class="token operator">=</span>5b0291bb77c8344dea90372c,name<span class="token operator">=</span>Software Solutions,address<span class="token operator">=</span>HSR, India<span class="token punctuation">))</span>
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> LearningMongoTestSuite:
+<span class="token punctuation">[</span>info<span class="token punctuation">]</span> - list all companies
+<span class="token punctuation">..</span>.
+</code></pre></div><ul><li><strong>Exercise:</strong> Write a function to get the details of a company given the company name.</li></ul><ol start="4"><li><p>Update a record using CollectionUpdate</p><ul><li>define a function to update a company's address</li></ul></li></ol><div class="language-scala extra-class"><pre class="language-scala"><code><span class="token keyword">object</span> LearningMongoObject <span class="token keyword">extends</span> LearningMongoTrait <span class="token punctuation">{</span>
+	<span class="token keyword">def</span> updateCompany<span class="token punctuation">(</span>name<span class="token operator">:</span><span class="token builtin">String</span><span class="token punctuation">,</span> newAddress<span class="token operator">:</span><span class="token builtin">String</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Unit</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+		<span class="token keyword">val</span> q <span class="token operator">=</span> CompanyQuery<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>name<span class="token punctuation">.</span>is<span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+		<span class="token keyword">val</span> u <span class="token operator">=</span> CompanyUpdate<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>address<span class="token punctuation">.</span>set<span class="token punctuation">(</span>newAddress<span class="token punctuation">)</span>
+		CompanyWriter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>updateOne<span class="token punctuation">(</span>q<span class="token punctuation">,</span>u<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>Call this method from a test-case in the mongo module :</li></ul><div class="language-scala extra-class"><pre class="language-scala"><code><span class="token keyword">class</span> LearningMongoTestSuite <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">{</span>
+	test<span class="token punctuation">(</span><span class="token string">&quot;update company address&quot;</span><span class="token punctuation">,</span> Tag<span class="token punctuation">(</span><span class="token string">&quot;update&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	 	println<span class="token punctuation">(</span><span class="token string">&quot;updating company... &quot;</span><span class="token punctuation">)</span>
+	 	updateCompany<span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;Software Solutions&quot;</span><span class="token punctuation">,</span> newAddress <span class="token operator">=</span> <span class="token string">&quot;Koramangala, India&quot;</span> <span class="token punctuation">)</span>
+	 	println<span class="token punctuation">(</span><span class="token string">&quot;done.&quot;</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>Run the test case to see the change in db.</li></ul><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>LearningMongo<span class="token punctuation">]</span> test-only *LearningMongoTestSuite* -- -n update
+<span class="token punctuation">..</span>.
+</code></pre></div><ol start="5"><li>Delete a record</li></ol><ul><li>define a function to remove a given company</li></ul><div class="language-scala extra-class"><pre class="language-scala"><code><span class="token keyword">object</span> LearningMongoObject <span class="token keyword">extends</span> LearningMongoTrait <span class="token punctuation">{</span>
+	<span class="token keyword">def</span> removeCompany<span class="token punctuation">(</span>name<span class="token operator">:</span><span class="token builtin">String</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Unit</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+		 <span class="token keyword">val</span> q <span class="token operator">=</span> CompanyQuery<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>name<span class="token punctuation">.</span>is<span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+		 CompanyWriter<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>remove<span class="token punctuation">(</span>q<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>Call this method from a test-case in the mongo module :</li></ul><div class="language-scala extra-class"><pre class="language-scala"><code><span class="token keyword">class</span> LearningMongoTestSuite <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">{</span>
+	test<span class="token punctuation">(</span><span class="token string">&quot;remove company&quot;</span><span class="token punctuation">,</span> Tag<span class="token punctuation">(</span><span class="token string">&quot;remove&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		 println<span class="token punctuation">(</span><span class="token string">&quot;removing company.. &quot;</span><span class="token punctuation">)</span>
+		 removeCompany<span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">&quot;Software Solutions&quot;</span><span class="token punctuation">)</span>
+		 println<span class="token punctuation">(</span><span class="token string">&quot;done.&quot;</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>Run the test case to see the change in db.</li></ul><div class="language-bash extra-class"><pre class="language-bash"><code>		<span class="token punctuation">[</span>LearningMongo<span class="token punctuation">]</span> test-only *LearningMongoTestSuite* -- -n remove
+</code></pre></div><ol start="6"><li>Collection extension classes: extend vs object extend</li></ol><p>You can add some commonly accessed methods to a collection using an object extend ex: listCompainesInCity(city:String). Where as for instance specific apis use extend, ex: it would be usefull to get a method like getAllEmployeeList defined on a company row.</p><ul><li>Open file LeaningMongo.kmongo in eclipse</li><li>Add the extend keyword in Company collection definition:</li></ul><div class="language- extra-class"><pre class="language-text"><code>collection Company extend {
+	property name:String
+	property address:String
+}
+</code></pre></div><ul><li>On compile, you must see a file by name CompanyRowExtn created with the company row available in scope</li><li>Define getAllEmployeeList in this extension class</li></ul><div class="language- extra-class"><pre class="language-text"><code>trait CompanyRowExtn extends CompanyRowExtnTrait {
+ row: CompanyRow =&gt;
+ def getAllEmployeeList: List[EmployeeRow] = {
+   EmployeeQuery().company_oid.is(row._id).find
+ }
+}
+</code></pre></div><ul><li>Call this api from a test:</li></ul><div class="language-scala extra-class"><pre class="language-scala"><code><span class="token keyword">class</span> LearningMongoTestSuite <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">{</span>
+	test<span class="token punctuation">(</span><span class="token string">&quot;list all employees&quot;</span><span class="token punctuation">,</span> Tag<span class="token punctuation">(</span><span class="token string">&quot;employees&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		 <span class="token keyword">val</span> name <span class="token operator">=</span> <span class="token string">&quot;Software Solutions&quot;</span>
+		 createCompany<span class="token punctuation">(</span>name <span class="token operator">=</span> name<span class="token punctuation">,</span> address <span class="token operator">=</span> <span class="token string">&quot;HSR, India&quot;</span><span class="token punctuation">)</span>
+		 <span class="token keyword">val</span> company <span class="token operator">=</span> findCompany<span class="token punctuation">(</span>name <span class="token operator">=</span> name<span class="token punctuation">)</span><span class="token punctuation">.</span>get
+		 <span class="token keyword">val</span> employeeList <span class="token operator">=</span> company<span class="token punctuation">.</span>getAllEmployeeList
+		 println<span class="token punctuation">(</span><span class="token string">&quot;Employee List: &quot;</span> <span class="token operator">+</span> employeeList<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>Run the test case to see the results.</li></ul><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>LearningMongo<span class="token punctuation">]</span> test-only *LearningMongoTestSuite* -- -n employees
+</code></pre></div><h1 id="assignment"><a href="#assignment" aria-hidden="true" class="header-anchor">#</a> Assignment</h1><ol><li>Re-code all the company apis written earlier to read from database as opposed to in-memory.</li><li>Copy, modify &amp; run test cases from LearningMongoTestSuite.</li></ol></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/doc-smile/docs/training/smile-training/mongo-setup.html" class="prev">
+          Mongo Setup
+        </a></span><span class="next"><a href="/doc-smile/docs/training/smile-training/domain-module.html">
+          Domain Module
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/doc-smile/docs/assets/js/6.215e425f.js" defer></script><script src="/doc-smile/docs/assets/js/app.10c24a9a.js" defer></script>
+  </body>
+</html>
