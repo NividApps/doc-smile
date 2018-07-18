@@ -23,3 +23,4 @@ title: Training
 *   [Domain Module](domain-module.html)
 *   [Play Module](play-module.html)
 *   [Vue Module](smile-training/vue/)
+*	[Gompa Module](gompa-module.html)
