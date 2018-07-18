@@ -21,13 +21,14 @@ module.exports = {
 	      	'page1'
 	      ],
 	      '/examples/foodbowl/':[
-            'objectives'
+            '',
+            'phase I'
 	      ],	      
 	      '/examples/': [
 	        'lottery/',
 	        'driving-license/',
 	        'bike-rental/' ,
-	        'foodbowl'
+	        'foodbowl/'
 	      ],
 	      '/training/': [
 	        'scala-training',
