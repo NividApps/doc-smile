@@ -11,3 +11,4 @@ title : Smile Training
 *   [Domain Module](domain-module.html)
 *   [Play Module](play-module.html)
 *   [Vue Module](vue/)
+*	[Gompa Module](gompa-module.html)

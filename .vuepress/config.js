@@ -67,6 +67,7 @@ module.exports = {
 	        'domain-module',
 	        'play-module',
 	        'vue/',
+	        'gompa-module',
 
 	      ],
 	      '/training/': [
