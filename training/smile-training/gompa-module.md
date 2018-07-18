@@ -117,4 +117,34 @@ private def handleErrorMessage(error: ErrorResponse) = {
 }
 }
 ```
-8)
+8)Add a nav-bar to `libraryapp-main.html`.
+```html
+<ul class="nav navbar-nav navbar-right">
+  <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello
+      {{loggedInUser.firstName}} <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+          <li><a href="#">{{loggedInUser.fullName}}</a></li>
+          <li><a href="/login#/logout?redirectUrl=/library">Sign Out</a></li>
+      </ul>
+</ul>
+```
+9)update a computed and mounted in `libraryapp-main.html` to the below code.
+```
+computed: {
+          loggedInUser: function () {
+              return store.state.loggedInUser
+          }
+      },
+mounted: function () {
+    var userName = window.localStorage.getItem("loggedInUser");
+    console.log(userName);
+    LibraryApp.UserActions.getUserDetails(store,userName)
+}
+```
+10)Run the server and type in the link:[http://localhost:9000/library](http://localhost:9000/library)\
+11)Login with using created user name and password.
+
+<img :src="$withBase('/training/login_img.png')"/>
+
+12)Success:Now u can see the name in which u logged in.
+<img :src="$withBase('/training/logged_page.png')"/>
