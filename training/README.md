@@ -17,10 +17,10 @@ title: Training
 # Smile Training
 
 *   [Smile Modules Overview](smile-modules-overview.html)
-*   [Data Module](data-module.html)
-*   [Mongo Setup](mongo-setup.html)
-*   [Mongo Module](mongo-module.html)
-*   [Domain Module](domain-module.html)
-*   [Play Module](play-module.html)
+*   [Data Module](smile-training/data-module.html)
+*   [Mongo Setup](smile-training/mongo-setup.html)
+*   [Mongo Module](smile-training/mongo-module.html)
+*   [Domain Module](smile-training/domain-module.html)
+*   [Play Module](smile-training/play-module.html)
 *   [Vue Module](smile-training/vue/)
-*	[Gompa Module](gompa-module.html)
+*	[Gompa Module](smile-training/gompa-module.html)
