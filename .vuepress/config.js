@@ -39,7 +39,9 @@ module.exports = {
 	        'domain-module',
 	        'play-module',
 	        'vue-training',
-	        'vue-smile-training'
+	        'vue-smile-training',
+	        'gompa-module'
+
 
 	      ],
 
