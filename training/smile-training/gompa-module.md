@@ -258,3 +258,4 @@ mounted: function () {
             LibraryApp.UserActions.getUserDetails(store,userName)
         }
 ```
+7)video showing how to add users and final output.
