@@ -148,3 +148,109 @@ mounted: function () {
 
 12)Success:Now u can see the name in which u logged in.
 <img :src="$withBase('/training/logged_page.png')"/>
+
+## Authorization
+1)Update actions user in `libraryApp.kvue`
+```
+actions User{
+  getUserDetails
+  getUserGroupListForUser
+  getRoleListForUser
+}
+```
+2)Update store in `libraryApp.kvue`
+```
+store {
+        state (
+                recentBooks: Book*,
+                loggedInUser:User,
+                userGroupList:String*,
+        userRoleList:String*
+                
+        )
+
+        mutations Book {
+                mutateRecentBooks(recentBooks: Book*)
+                mutateUser(user:User)
+                mutateUserGroupList(userGroupList:String*)
+        mutateUserRoleList(userRoleList:String*)
+        }
+}
+```
+3)Go `BookMutationsCode.scala` and add the below function.
+```scala
+    override def mutateUserGroupList: (State, JsArray[String]) => Unit = (state,userGroupList) => {
+        state.userGroupList = userGroupList
+    }
+
+    override def mutateUserRoleList: (State, JsArray[String]) => Unit = (state,userRoleList) => {
+        state.userRoleList = userRoleList
+    }
+```
+4)Go to `UserActionCode.scala` and update the code to as shown below.
+```scala
+def getUserDetails: (Store, String) => Unit = (store, userName) => {
+
+    UserReaderBackend.getUserDetails(GetUserDetails.Input(userName)).onSuccess {
+      case (xhr, Right(output)) =>
+        val user = User.fromDynamic(output.toJson)
+        getUserGroupListForUser(store,userName)
+        getRoleListForUser(store,userName)
+        store.MUTATE_USER(user)
+      case (xhr, Left(error)) => handleErrorMessage(error)
+    }
+  }
+
+def getUserGroupListForUser: (Store, String) => Unit = (store, userName) => {
+
+    UserReaderBackend.getUserGroupListForUser(GetUserGroupListForUser.Input(userName)).onSuccess {
+      case (xhr, Right(outputList)) =>
+
+        val list: JsArray[String] = outputList.map(output => output).toJSArray
+
+        store.MUTATE_USER_GROUP_LIST(list)
+      case (xhr, Left(error)) => handleErrorMessage(error)
+    }
+  }
+
+def getRoleListForUser: (Store, String) => Unit = (store, userName) => {
+
+  UserReaderBackend.getRoleListForUser(GetRoleListForUser.Input(userName)).onSuccess {
+    case (xhr, Right(outputList)) =>
+      val roleList: JsArray[String] = outputList.map(output => output).toJSArray
+      store.MUTATE_USER_ROLE_LIST(roleList)
+    case (xhr, Left(error)) => handleErrorMessage(error)
+    }
+  }
+```
+5)update computed and mounted in `libraryapp-main.html` to the below code.
+```
+computed: {
+            loggedInUser: function () {
+                return store.state.loggedInUser
+            },
+            userGroupList:function () {
+                return store.state.userGroupList
+            },
+            userRoleList:function () {
+                return store.state.userRoleList
+            },
+            canAddBook:function () {
+                var userGroupListWhoCanAddBook = this.userGroupList.filter(function (userGroup) {
+                    return(userGroup == 'library_add_book')
+                })
+                return (userGroupListWhoCanAddBook.length>0)
+            },
+            hasAddBookRole:function () {
+                var userRoleListWhoCanAddBook = this.userRoleList.filter(function (userRole) {
+                    return(userRole == 'add_book')
+                })
+                return (userRoleListWhoCanAddBook.length>0)
+            }
+        },
+mounted: function () {
+            var userName = window.localStorage.getItem("loggedInUser");
+            console.log(userName);
+            LibraryApp.UserActions.getUserDetails(store,userName)
+        }
+```
