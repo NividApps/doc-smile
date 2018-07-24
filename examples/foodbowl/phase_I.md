@@ -1,12 +1,13 @@
 ---
-title: PHASE I
+title: Phase I
 ---
 
 # Phase I
        
 ## Create FoodBowl Project
 
-Create a FoodBowl project and set-up
+1. Create a FoodBowl project and set-up
+
 ```bash
 ~/temp $ smile new FoodBowl
 ~/temp $ cd FoodBowl
@@ -14,27 +15,28 @@ Create a FoodBowl project and set-up
 ~/temp/foodbowl $ sbt
 $[foodbowl] smile
 ```
+
 **Load project in IntelliJ(build.sbt) and Eclipse(import k)**
 
 ## FoodBowl Mongo Module
 
 
-* Open FoodBowl.ksmile in Eclipse.
-* Edit FoodBowl.ksmile and insert the below content to create a FoodBowl Mongo module
+1. Open `FoodBowl.ksmile` in Eclipse.
 
-**FoodBowl.ksmile**
+2. Edit `FoodBowl.ksmile` and insert the below content to create a FoodBowl Mongo module
 
 ```
-
-  section foodBowl {
-	mongo-module FoodBowlMongo at com.nividapps.foodbowlmongo
-  }
+section FoodBowl {
+	mongo-module FoodBowlMongo at com.metastay.foodbowlmongo
+}
 ```
-* $smile
-* In Eclipse refresh to see the FoodBowlMongo.kmongo
-* Edit FoodBowlMongo.kmongo to add a collection.
 
-**FoodBowlMongo.kmongo**
+3. $smile
+
+4. In Eclipse refresh to see the `FoodBowlMongo.kmongo`
+
+5. Edit `FoodBowlMongo.kmongo` to add a collection
+
 ```    
 collection Food {
 	property description:String
@@ -64,12 +66,14 @@ collection FoodAcceptance {
 	property actualTimeOfCollection:DateTime?
 }
 ```
-* $compile
-* Write test cases in FoodBowlMongoTestSuite.scala to add entry of Food ,FoodRequest ,FoodAcceptance Collections and check whether the entries are added to the database.
 
-### References in Collections
-We can reference one collection from other collection.
-* Edit FoodBowlMongo.kmongo to reference collections.
+6. $compile
+
+7. Write test cases in `FoodBowlMongoTestSuite.scala` to add entry of Food, FoodRequest, FoodAcceptance Collections and check whether the entries are added to the database
+
+## References in Collections
+
+1. We can reference one collection from other collection. Edit `FoodBowlMongo.kmongo` to reference collections
 
 ```
 collection Donor {

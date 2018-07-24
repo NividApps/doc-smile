@@ -30,7 +30,8 @@ module.exports = {
 	      ],
 	      '/examples/foodbowl/':[
             '',
-            'phase I'
+            'phase_I',
+            'phase_II'
 	      ],	      
 	      '/examples/': [
 	      	'',
